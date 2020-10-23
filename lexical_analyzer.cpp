@@ -13,11 +13,17 @@ map<int,string> token_type; //数字所代表的符号类型，固定
 map<int,int> token_num;//用以统计各类型记号的出现次数
 map<string, int> operators;
 queue<char> token_queue;
+string err_info;
+int line = 0;
 
 bool header_flag = false;
 bool crossing_flag = false;
 bool annotation = false;
 
+void load_code(string path)
+{
+
+}
 void read_op_table(string path)
 {
     fstream t(path,ios::in|ios::out);
@@ -317,7 +323,7 @@ void analyze(char* s)
                 }
                 break;
             case 8://界符
-                if(s[i] == '\'' || s[i] == '\"')
+                if(s[i] == '\'' || s[i] == '\"')//转义字符需要处理，不然字符串中的分号很可能被当作界符
                 {
                     cout<<"state8:";
                     cout<<s[i]<<" ";
@@ -358,9 +364,22 @@ void analyze(char* s)
                         else
                         {
                             token_queue.push(s[i]);
+                            if(s[i] == '\\')
+                            {
+                                i++;
+                                token_queue.push(s[i]);
+                            }
                             i++;
                         }
                     }
+                }
+                else if(s[i] == '#')
+                {
+                    header_flag = true;
+                    cout<<"header on";
+                    cout<<"# ";
+                    i++;
+                    state = judge_type(s[i]);
                 }
                 else
                 {
@@ -383,8 +402,60 @@ void analyze(char* s)
                     }
                     else if(s[i] == '/')
                         over = true;
+                    else if(judge_type(s[i]) == 9)
+                    {
+                        token_queue.push('/');
+                        state = 9;
+                    }
+                    else
+                    {
+                        cout<<"/ ";
+                        state = judge_type(s[i]);
+                    }
+                }/*
+                else if(s[i] == '#')
+                {
+                    header_flag = true;
+                    cout<<"header on";
 
+                    i++;
+                    state = judge_type(s[i]);
+                }*/
+                else if(s[i] == '<' && header_flag)
+                {
+                    cout<<"< (界符) ";
+                    i++;
+                    state = judge_type(s[i]);
                 }
+                else if(s[i] == '>' && header_flag)
+                {
+                    cout<<"> (界符) ";
+                    header_flag = false;
+                    i++;
+                    state = judge_type(s[i]);
+                }
+                else
+                {
+                    if(judge_type(s[i+1]) == 9)
+                    {
+                        token_queue.push(s[i]);
+                        i++;
+                    }
+                    else
+                    {
+                        token_queue.push(s[i]);
+                        i++;
+                        state = judge_type(s[i]);
+                        while(!token_queue.empty())
+                        {
+                        //cout<<"pop:";
+                            cout<<token_queue.front();
+                            token_queue.pop();
+                        }
+                        cout<<" ";
+                    }
+                }
+                
                 break;
             case 10://进入注释模式
                 cout<<"case 10:";
@@ -452,13 +523,30 @@ void analyze(char* s)
 
 int main()
 {
-    char s[] = "12as//da int a;\n1234567890982301\n";
-    //tokens["&"] = 3;
     read_op_table("./operator_map.txt");
-    analyze(s);
-    cout<<" next state:"<<judge_type(s[16]);
-    cout<<" annotation: "<<annotation;
-    analyze(s+16);
+    char s[] = "# include <iostream>\n";
+    fstream t("lexical_analyzer.cpp",ios::in|ios::out);
+    char temp[1024];
+    while (t.getline(temp,1024))
+    {
+        string s1 = temp;
+        //cout<<"hey";
+        int len = s1.length();
+        //cout<<len;
+        temp[len] = '\n';
+        //cout<<"hey";
+        temp[len+1] = 0;
+        analyze(temp);
+        cout << endl;
+        //cout<<"hey";
+    }
+    t.close();
+
+    //tokens["&"] = 3;
+    //read_op_table("./operator_map.txt");
+    //cout<<" next state:"<<judge_type(s[16]);
+    //cout<<" annotation: "<<annotation;
+    //analyze(s);
     //cout<<operators["+"];
     //read_op_table("./temp.txt");
     /*
