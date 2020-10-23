@@ -89,6 +89,7 @@ void analyze(char* s)
                 break;
             case 2:
                 //cout<<"2->"<<"pushed:"<<s[i]<<'~';
+                cout<<" state2:" ;
                 token_queue.push(s[i]);
                 //cout<<"front:"<<token_queue.front()<<'~';
                 i++;
@@ -108,19 +109,55 @@ void analyze(char* s)
                     i++;
                     state = 5;
                 }
+                else if(judge_type(s[i]) == 1)
+                {
+                    state = -6;
+                }
+                else
+                {
+                    state = judge_type(s[i]);
+                    while(!token_queue.empty())
+                    {
+                        //cout<<"pop:";
+                        cout<<token_queue.front();
+                        token_queue.pop();
+                    }
+                    cout<<" ";
+                }
+                
                 break;
             case 3:
                 //cout<<"3->";
+                cout<<" state3:" ;
                 if(judge_type(s[i]) == 2)
                 {
                     token_queue.push(s[i]);
                     i++;
                     state = 4;
                 }
+                else if(s[i] == '.')
+                {
+                    i++;
+                    state = 3;
+                    //ERR
+                }
+                else if(judge_type(s[i]) == 1)
+                {
+                    token_queue.push('0');
+                    state = -6;
+                    while(!token_queue.empty())
+                    {
+                        //cout<<"pop:";
+                        cout<<token_queue.front();
+                        token_queue.pop();
+                    }
+                    cout<<" ";
+                }
                 else
                 {
                     token_queue.push('0');
-                    state = judge_type(s[i]);
+                    //state = judge_type(s[i]);
+                    state = -5;
                     while(!token_queue.empty())
                     {
                         //cout<<"pop:";
@@ -131,14 +168,39 @@ void analyze(char* s)
                 }
                 break;
             case 4:
+                cout<<" state4:" ;
                 if(judge_type(s[i]) == 2)
                 {
                     token_queue.push(s[i]);
                     i++;
-                    state = 4;//问题：读到换行符就不读了，没来得及pop(已解决)
+                    state = 4;//问题：读到换行符就不读了，没来得及pop(已解决 )
+                }
+                else if(s[i] == 'e')
+                {
+                    token_queue.push(s[i]);
+                    i++;
+                    state = 5;
+                }
+                else if(s[i] == '.')
+                {
+                    i++;
+                    state = 4;
+                    //ERR
+                }
+                else if(judge_type(s[i]) == 1)
+                {
+                    state = -6;
+                    while(!token_queue.empty())
+                    {
+                        //cout<<"pop:";
+                        cout<<token_queue.front();
+                        token_queue.pop();
+                    }
+                    cout<<" ";
                 }
                 else
                 {
+                    //state = judge_type(s[i]);
                     state = judge_type(s[i]);
                     while(!token_queue.empty())
                     {
@@ -150,23 +212,135 @@ void analyze(char* s)
                     //state = -4;
                 }
                 break;
-                
-            case -4:
-                over = true;
+            case 5:
+                cout<<" state5:" ;
+                if(s[i] == '+' || s[i] == '-')
+                {
+                    token_queue.push(s[i]);
+                    i++;
+                    state = 6;
+                }
+                else if(judge_type(s[i]) == 2)
+                {
+                    token_queue.push(s[i]);
+                    i++;
+                    state = 7;
+                }
+                else if(judge_type(s[i]) == 1)
+                {
+                    state = -6;
+                    while(!token_queue.empty())
+                    {
+                        //cout<<"pop:";
+                        if(token_queue.front() != 'e')
+                            cout<<token_queue.front();
+                        token_queue.pop();
+                    }
+                    cout<<" ";
+                }
+                else
+                {
+                    //token_queue.push('0');
+                    //state = judge_type(s[i]);
+                    state = -5;
+                    while(!token_queue.empty())
+                    {
+                        //cout<<"pop:";
+                        if(token_queue.front() != 'e' && token_queue.front() != '+' && token_queue.front() != '-')
+                            cout<<token_queue.front();
+                        token_queue.pop();
+                    }
+                    cout<<" ";
+                }
                 break;
-
+            case 6:
+                cout<<" state6:" ;
+                if(judge_type(s[i]) == 2)
+                {
+                    token_queue.push(s[i]);
+                    i++;
+                    state = 7;
+                }
+                else
+                {
+                    state = 5;
+                }
+                break;
+            case 7:
+                cout<<" state7:" ;
+                if(judge_type(s[i]) == 1)
+                {
+                    state = -6;
+                    while(!token_queue.empty())
+                    {
+                        //cout<<"pop:";
+                        cout<<token_queue.front();
+                        token_queue.pop();
+                    }
+                    cout<<" ";
+                }
+                else if(judge_type(s[i]) == 2)
+                {
+                    state = 7;
+                    token_queue.push(s[i]);
+                    i++;
+                }
+                else if(s[i] == '.')
+                {
+                    state = 7;
+                    i++;
+                    //ERR
+                }
+                else
+                {
+                    state = judge_type(s[i]);
+                    while(!token_queue.empty())
+                    {
+                        //cout<<"pop:";
+                        cout<<token_queue.front();
+                        token_queue.pop();
+                    }
+                    cout<<" ";
+                }
+                break;
+                
             case -3:
                 i++;
                 state = judge_type(s[i]);
-                cout<<"(ERR) ";
+                cout<<"(ERR3) ";
                 break;
+            case -4:
+                over = true;
+                break;
+            case -5:
+                state = judge_type(s[i]);
+                cout<<"(ERR5) ";
+                break;
+            case -6:
+                token_queue.push(s[i]);
+                i++;
+                if(judge_type(s[i]) == 1)
+                    state = -6;
+                else
+                {
+                    state = judge_type(s[i]);
+                    while(!token_queue.empty())
+                    {
+                        //cout<<"pop:";
+                        cout<<token_queue.front();
+                        token_queue.pop();
+                    }
+                    cout<<"(ERR0) ";
+                }
+                break;
+                
         }
     }
 }
 
 int main()
 {
-    char s[] = "3. 3.85\n";
+    char s[] = "3. 3. 4. 5eA\n";
     
     //tokens["&"] = 3;
     analyze(s);
