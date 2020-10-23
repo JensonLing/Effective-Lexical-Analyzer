@@ -11,7 +11,7 @@ using namespace std;
 map<string,int> tokens;//包含所有可识别的符号及保留字，可添加
 map<int,string> token_type; //数字所代表的符号类型，固定
 map<int,int> token_num;//用以统计各类型记号的出现次数
-map<string, int> operators;
+map<string, int> operators;//存储单词首字母与初入状态间的映射关系
 queue<char> token_queue;
 string err_info;
 int line = 0;
@@ -20,10 +20,6 @@ bool header_flag = false;
 bool crossing_flag = false;
 bool annotation = false;
 
-void load_code(string path)
-{
-
-}
 void read_op_table(string path)
 {
     fstream t(path,ios::in|ios::out);
@@ -41,6 +37,49 @@ void read_op_table(string path)
         //out.append("\0");
     }
     t.close();
+}
+
+void read_tokens()
+{
+    fstream t("./tokens.txt",ios::in|ios::out);
+    char temp[1024];
+    while(t.getline(temp,1024))
+    {
+        int type = atoi(temp);
+        //cout<<"get:"<<type<<endl;
+        t.getline(temp,1024);
+        string s = temp;
+        tokens[s] = type;
+         //cout<<s.length();
+
+        //out.append("\0");
+    }
+    t.close();
+}
+
+void read_token_map()
+{
+    fstream t("./token_map.txt",ios::in|ios::out);
+    char temp[1024];
+    for(int i = 1; i <= 9; i++)
+    {
+        //cout<<"get:"<<type<<endl;
+        t.getline(temp,1024);
+        string s = temp;
+        token_type[i] = s;
+    }
+}
+
+void print_token_table()
+{
+    map<string, int> ::iterator iter;
+    for(iter = tokens.begin(); iter != tokens.end(); iter++)
+    {
+        if(iter->second == 1)
+            cout << '<' << iter->first << " , " << token_type[iter->second] << '>' << endl;
+        else
+            cout << '<' << token_type[iter->second] << " , " << iter->first << '>' << endl;
+    }
 }
 
 int judge_type(char c)
@@ -524,6 +563,9 @@ void analyze(char* s)
 int main()
 {
     read_op_table("./operator_map.txt");
+    read_tokens();
+    read_token_map();
+    print_token_table();/*
     char s[] = "# include <iostream>\n";
     fstream t("lexical_analyzer.cpp",ios::in|ios::out);
     char temp[1024];
@@ -540,8 +582,7 @@ int main()
         cout << endl;
         //cout<<"hey";
     }
-    t.close();
-
+    t.close();*/
     //tokens["&"] = 3;
     //read_op_table("./operator_map.txt");
     //cout<<" next state:"<<judge_type(s[16]);
@@ -565,4 +606,3 @@ int main()
     for(iter = operators.begin(); iter != operators.end(); iter++)
         cout << iter->first << " " << iter->second << endl;*/
 }
-
