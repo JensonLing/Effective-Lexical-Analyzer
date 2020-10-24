@@ -598,7 +598,7 @@ void analyze(char* s)
                 else if(s[i] == '#')
                 {
                     header_flag = true;
-                    cout<<"header on";
+                    //cout<<"header on";
                     token_queue.push(s[i]);
                     string str = generate_token();
                     token_inc(str);
@@ -816,6 +816,19 @@ void analyze(char* s)
     }
 }
 
+void print_readme()
+{
+    fstream t("./readme.txt",ios::in|ios::out);
+    char temp[1024];
+    string s;
+    while (t.getline(temp,1024))
+    {
+        s.append(temp);
+        s.append("\n");
+    }
+    cout<<s<<endl;
+}
+
 int main(int argc, char *argv[])
 {
     read_op_table(OPERATOR_MAP_PATH);
@@ -828,7 +841,7 @@ int main(int argc, char *argv[])
         for(int i = 1; i < argc ; i++)
         {
             string s = argv[i];
-            if(s.compare("-p") == 0)
+            if(s.compare("analyze") == 0)
             {
                 i++;
                 code_path = argv[i];
@@ -847,8 +860,21 @@ int main(int argc, char *argv[])
                 show_line_num = true;
                 complete_info = true;
             }
+            else if(s.compare("-h") == 0)
+            {
+                print_readme();
+            }
+            else if(s.compare("token-table") == 0)
+            {
+                print_token_table();
+            }
         }
     }
+    else
+    {
+        print_readme();
+    }
+    
     
     //freopen("./output.txt","w",stdout);
     //print_token_table();
@@ -863,7 +889,7 @@ int main(int argc, char *argv[])
 
     //print_statistics();
     
-    char s[] = "# include <iostream>\n";
+    //char s[] = "# include <iostream>\n";
     fstream t(code_path,ios::in|ios::out);
     char temp[1024];
     while (t.getline(temp,1024))
@@ -886,8 +912,8 @@ int main(int argc, char *argv[])
         //cout<<"hey";
     }
     t.close();
-    print_err_info();
-    print_statistics();
+    //print_err_info();
+    //print_statistics();
     //print_token_table();
     //tokens["&"] = 3;
     //read_op_table("./operator_map.txt");
@@ -911,4 +937,5 @@ int main(int argc, char *argv[])
     /*map<string, int> ::iterator iter; 
     for(iter = operators.begin(); iter != operators.end(); iter++)
         cout << iter->first << " " << iter->second << endl;*/
+    system("pause");
 }
