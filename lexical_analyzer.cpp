@@ -25,6 +25,7 @@ bool header_flag = false;
 bool crossing_flag = false;
 bool annotation = false;
 bool complete_info = false;
+bool show_line_num = true;
 
 void read_op_table(string path)
 {
@@ -200,13 +201,13 @@ void analyze(char* s)
         switch(state)
         {
             case 0://空格，无需输出
-                cout<<"case0:";
+                if(complete_info)cout<<"==>state0:";
                 i++;
                 state = judge_type(s[i]);
                 //cout<<"next:"<<state;
                 break;
             case 1:
-                cout<<"case1:";
+                if(complete_info)cout<<"==>state1:";
                 token_queue.push(s[i]);
                 //cout<<"pushed:"<<s[i]<<endl;
                 i++;
@@ -235,7 +236,7 @@ void analyze(char* s)
                 break;
             case 2:
                 //cout<<"2->"<<"pushed:"<<s[i]<<'~';
-                cout<<" state2:" ;
+                if(complete_info)cout<<"==>state2:" ;
                 token_queue.push(s[i]);
                 //cout<<"front:"<<token_queue.front()<<'~';
                 i++;
@@ -278,7 +279,7 @@ void analyze(char* s)
                 break;
             case 3://识别到小数点
                 //cout<<"3->";
-                cout<<" state3:" ;
+                if(complete_info)cout<<"==>state3:" ;
                 if(judge_type(s[i]) == 2)
                 {
                     token_queue.push(s[i]);
@@ -329,7 +330,7 @@ void analyze(char* s)
                 }
                 break;
             case 4:
-                cout<<" state4:" ;
+                if(complete_info)cout<<"==>state4:" ;
                 if(judge_type(s[i]) == 2)
                 {
                     token_queue.push(s[i]);
@@ -382,7 +383,7 @@ void analyze(char* s)
                 }
                 break;
             case 5:
-                cout<<" state5:" ;
+                if(complete_info)cout<<"==>state5:" ;
                 if(s[i] == '+' || s[i] == '-')
                 {
                     token_queue.push(s[i]);
@@ -430,7 +431,7 @@ void analyze(char* s)
                 }
                 break;
             case 6://1e+xxx
-                cout<<" state6:" ;
+                if(complete_info)cout<<"==>state6:" ;
                 if(judge_type(s[i]) == 2)
                 {
                     token_queue.push(s[i]);
@@ -443,7 +444,7 @@ void analyze(char* s)
                 }
                 break;
             case 7://1e-1xx
-                cout<<" state7:" ;
+                if(complete_info)cout<<"==>state7:" ;
                 if(judge_type(s[i]) == 1)
                 {
                     state = -6;/*
@@ -487,7 +488,7 @@ void analyze(char* s)
                 }
                 break;
             case 8://界符
-                cout<<"state8:";
+                if(complete_info)cout<<"==>state8:";
                 if(s[i] == '\'' || s[i] == '\"')//转义字符需要处理，不然字符串中的分号很可能被当作界符
                 {
                     //cout<<s[i]<<" ";
@@ -609,7 +610,7 @@ void analyze(char* s)
                 }
                 else
                 {
-                    //cout<<"state8:";
+                    //if(complete_info)cout<<"==>state8:";
                     token_queue.push(s[i]);
                     string str = generate_token();
                     token_inc(str);
@@ -620,7 +621,7 @@ void analyze(char* s)
                 }
                 break;
             case 9://运算符
-                cout<<"case 9:";
+                if(complete_info)cout<<"==>state 9:";
                 if(s[i] == '/')
                 {
                     i++;
@@ -645,6 +646,7 @@ void analyze(char* s)
 
                         state = 10;
                         annotation = true;
+                        //cout<<"turned true";
                         i++;
                     }
                     else if(s[i] == '/')
@@ -745,7 +747,7 @@ void analyze(char* s)
                 
                 break;
             case 10://进入注释模式
-                cout<<"case 10:";
+                if(complete_info)cout<<"==>state 10:";
                 if(s[i] == '\n')
                     over = true;
                 else if(s[i] == '*')
@@ -760,7 +762,7 @@ void analyze(char* s)
                 
                 break;
             case 11:
-                cout<<"case 11:";
+                if(complete_info)cout<<"==>state 11:";
                 if(s[i] == '/')
                 {
                     annotation = false;
@@ -778,15 +780,18 @@ void analyze(char* s)
             case -3:
                 i++;
                 state = judge_type(s[i]);
-                cout<<"(ERR3) ";
+                if(complete_info)cout<<"==>state -3: ";
                 break;
             case -4://退出状态
                 over = true;
+                if(complete_info)cout<<"==>state -4: ";
                 break;
             case -5:
                 state = judge_type(s[i]);
+                if(complete_info)cout<<"==>state -5: ";
                 break;
             case -6://错误，非法标识符
+                if(complete_info)cout<<"==>state -6: ";
                 token_queue.push(s[i]);
                 i++;
                 if(judge_type(s[i]) == 1)
@@ -811,26 +816,61 @@ void analyze(char* s)
     }
 }
 
-int main()
+int main(int argc, char *argv[])
 {
     read_op_table(OPERATOR_MAP_PATH);
     read_tokens();
     read_token_map();
+    string code_path;
+
+    if(argc > 1)
+    {
+        for(int i = 1; i < argc ; i++)
+        {
+            string s = argv[i];
+            if(s.compare("-p") == 0)
+            {
+                i++;
+                code_path = argv[i];
+            }
+            else if(s.compare("-o") == 0)
+            {
+                i++;
+                freopen(argv[i],"w",stdout);
+            }
+            else if(s.compare("--pure") == 0)
+            {
+                show_line_num = false;
+            }
+            else if(s.compare("--complete") == 0)
+            {
+                show_line_num = true;
+                complete_info = true;
+            }
+        }
+    }
+    
     //freopen("./output.txt","w",stdout);
     //print_token_table();
+    
+    /*
     line++;
+    complete_info = true;
     char c[] = "a +++\"+ 1234basdsc\\n\"\n";
     analyze(c);
-    print_err_info();
+    print_err_info();*/
+
+
     //print_statistics();
-    /*
+    
     char s[] = "# include <iostream>\n";
-    fstream t("lexical_analyzer.cpp",ios::in|ios::out);
+    fstream t(code_path,ios::in|ios::out);
     char temp[1024];
     while (t.getline(temp,1024))
     {
         line++;
-        cout<<"Line:"<<line<<endl;
+        if(show_line_num)
+            cout<<"Line:"<<line<<endl;
         string s1 = temp;
         //cout<<"hey";
         int len = s1.length();
@@ -839,12 +879,16 @@ int main()
         //cout<<"hey";
         temp[len+1] = 0;
         analyze(temp);
-        cout << endl;
+        if(show_line_num)
+            cout << endl;
+        if(complete_info)
+            cout << endl;
         //cout<<"hey";
     }
     t.close();
     print_err_info();
-    print_statistics();*/
+    print_statistics();
+    //print_token_table();
     //tokens["&"] = 3;
     //read_op_table("./operator_map.txt");
     //cout<<" next state:"<<judge_type(s[16]);
