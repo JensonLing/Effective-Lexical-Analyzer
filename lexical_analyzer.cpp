@@ -15,6 +15,7 @@ map<string, int> operators;//存储单词首字母与初入状态间的映射关
 queue<char> token_queue;
 string err_info;
 int line = 0;
+int number_num = 0;
 
 bool header_flag = false;
 bool crossing_flag = false;
@@ -61,7 +62,7 @@ void read_token_map()
 {
     fstream t("./token_map.txt",ios::in|ios::out);
     char temp[1024];
-    for(int i = 1; i <= 9; i++)
+    for(int i = 1; i <= 11; i++)
     {
         //cout<<"get:"<<type<<endl;
         t.getline(temp,1024);
@@ -80,6 +81,73 @@ void print_token_table()
         else
             cout << '<' << token_type[iter->second] << " , " << iter->first << '>' << endl;
     }
+}
+
+void print_statistics()
+{
+    cout<<endl<<"[数据统计]:"<<endl;
+    for(int i = 1; i <= 11; i++)
+    {
+        cout<<token_type[i]<<": "<<token_num[i]<<'\t';
+    }
+    cout<<"常数: "<<number_num<<endl<<endl;
+}
+
+void print_str(string s)
+{
+    cout << "<" << "字符串"<<" , "<< s << ">" <<endl;
+}
+
+void string_inc()
+{
+    token_num[11]++;
+}
+
+void print_token(string s)
+{
+    if(tokens[s] == 1)
+    {
+        cout << '<' << s << " , " << token_type[1] << '>' << endl;
+    }
+    else if(tokens[s] > 1)
+    {
+        cout << '<' << token_type[tokens[s]] << " , " << s << '>' << endl;
+    }
+    else
+        cout << "<" << "标识符"<<" , "<< s << ">" <<endl;
+}
+
+void print_num(string s)
+{
+    cout<< "<" << "常数" << " , " << s << ">" <<endl;
+}
+
+bool token_in_table(string s)
+{
+    if(tokens[s])
+        return true;
+    else
+        return false;
+}
+
+string generate_token()
+{
+    string temp;
+    while(!token_queue.empty())
+    {            //cout<<"pop:";
+        temp += token_queue.front();
+        token_queue.pop();
+    }
+    return temp;
+}
+void add_token(string s)//将记号添加到记号表
+{
+    tokens[s] = 10;
+}
+
+void token_inc(string s)//该类型记号数量++
+{
+    token_num[tokens[s]]++;
 }
 
 int judge_type(char c)
@@ -134,15 +202,21 @@ void analyze(char* s)
                 }
                 else
                 {
+                    /*
                     while(!token_queue.empty())
                     {
                         //cout<<"pop:";
                         cout<<token_queue.front();
                         token_queue.pop();
                     }
-                    cout<<" ";
+                    cout<<" ";*/
+                    string str  = generate_token();
+                    if(!token_in_table(str))
+                        add_token(str);
+                    print_token(str);
+                    token_inc(str);
                     state = judge_type(s[i]);
-                    cout<<"exit_state:"<<state<<" ";
+                    //cout<<"exit_state:"<<state<<" ";
                 }
                 break;
             case 2:
@@ -174,13 +248,17 @@ void analyze(char* s)
                 else
                 {
                     state = judge_type(s[i]);
+                    /*
                     while(!token_queue.empty())
                     {
                         //cout<<"pop:";
                         cout<<token_queue.front();
                         token_queue.pop();
                     }
-                    cout<<" ";
+                    cout<<" ";*/
+                    number_num++;
+                    string str = generate_token();
+                    print_num(str);
                 }
                 
                 break;
@@ -197,7 +275,7 @@ void analyze(char* s)
                 {
                     i++;
                     state = 3;
-                    //ERR
+                    //ERR:出现多个连续小数点
                 }
                 else if(judge_type(s[i]) == 1)
                 {
@@ -215,14 +293,18 @@ void analyze(char* s)
                 {
                     token_queue.push('0');
                     //state = judge_type(s[i]);
-                    state = -5;
+                    state = -5;//缺省错误
+                    /*
                     while(!token_queue.empty())
                     {
                         //cout<<"pop:";
                         cout<<token_queue.front();
                         token_queue.pop();
                     }
-                    cout<<" ";
+                    cout<<" ";*/
+                    string str = generate_token();
+                    print_num(str);
+                    number_num ++;
                 }
                 break;
             case 4:
@@ -239,7 +321,7 @@ void analyze(char* s)
                     i++;
                     state = 5;
                 }
-                else if(s[i] == '.')
+                else if(s[i] == '.')//小数点后又出现小数点，仅第一个小数点有效
                 {
                     i++;
                     state = 4;
@@ -260,13 +342,17 @@ void analyze(char* s)
                 {
                     //state = judge_type(s[i]);
                     state = judge_type(s[i]);
+                    /*
                     while(!token_queue.empty())
                     {
                         //cout<<"pop:";
                         cout<<token_queue.front();
                         token_queue.pop();
                     }
-                    cout<<" ";
+                    cout<<" ";*/
+                    string str = generate_token();
+                    print_num(str);
+                    number_num++;
                     //state = -4;
                 }
                 break;
@@ -301,14 +387,17 @@ void analyze(char* s)
                     //token_queue.push('0');
                     //state = judge_type(s[i]);
                     state = -5;
+                    string str;
                     while(!token_queue.empty())
                     {
                         //cout<<"pop:";
                         if(token_queue.front() != 'e' && token_queue.front() != '+' && token_queue.front() != '-')
-                            cout<<token_queue.front();
+                            str += token_queue.front();
                         token_queue.pop();
                     }
-                    cout<<" ";
+                    //cout<<" ";
+                    print_num(str);
+                    number_num++;
                 }
                 break;
             case 6:
@@ -343,7 +432,7 @@ void analyze(char* s)
                     token_queue.push(s[i]);
                     i++;
                 }
-                else if(s[i] == '.')
+                else if(s[i] == '.')//1e-5之后又出现小数点，忽略
                 {
                     state = 7;
                     i++;
@@ -351,21 +440,28 @@ void analyze(char* s)
                 }
                 else
                 {
-                    state = judge_type(s[i]);
+                    state = judge_type(s[i]);/*
                     while(!token_queue.empty())
                     {
                         //cout<<"pop:";
                         cout<<token_queue.front();
                         token_queue.pop();
                     }
-                    cout<<" ";
+                    cout<<" ";*/
+                    string str = generate_token();
+                    print_num(str);
+                    number_num++;
                 }
                 break;
             case 8://界符
                 if(s[i] == '\'' || s[i] == '\"')//转义字符需要处理，不然字符串中的分号很可能被当作界符
                 {
                     cout<<"state8:";
-                    cout<<s[i]<<" ";
+                    //cout<<s[i]<<" ";
+                    token_queue.push(s[i]);
+                    string str = generate_token();
+                    token_inc(str);
+                    print_token(str);
 
                     char crossing = s[i];
                     crossing_flag = true;
@@ -375,29 +471,42 @@ void analyze(char* s)
                         if(s[i] == crossing)
                         {
                             crossing_flag = false;
+                            string str = generate_token();
+                            if(str != "")
+                            {
+                                string_inc();
+                                print_str(str);
+                            }
+                            /*
+                            while(!token_queue.empty())
+                            {
+                                //cout<<"pop:";
+                                cout<<token_queue.front();
+                                token_queue.pop();
+                            }
+                            cout<<" ";*/
+                            token_queue.push(s[i]);
+                            str = generate_token();
+                            token_inc(str);
+                            print_token(str);
+                            //cout<<crossing<<" ";
                             i++;
                             state = judge_type(s[i]);
-                            while(!token_queue.empty())
-                            {
-                                //cout<<"pop:";
-                                cout<<token_queue.front();
-                                token_queue.pop();
-                            }
-                            cout<<" ";
-                            cout<<crossing<<" ";
-                            
                         }
-                        else if(s[i+1] == '\n')
+                        else if(s[i+1] == '\n')//到行末也没有出现引号
                         {
                             crossing_flag = false;
-                            token_queue.push(s[i]);
+                            token_queue.push(s[i]);/*
                             while(!token_queue.empty())
                             {
                                 //cout<<"pop:";
                                 cout<<token_queue.front();
                                 token_queue.pop();
                             }
-                            cout<<" ";
+                            cout<<" ";*/
+                            string str = generate_token();
+                            string_inc();
+                            print_str(str);
                             over = true;
                         }
                         else
@@ -416,14 +525,23 @@ void analyze(char* s)
                 {
                     header_flag = true;
                     cout<<"header on";
-                    cout<<"# ";
+                    token_queue.push(s[i]);
+                    string str = generate_token();
+                    token_inc(str);
+                    print_token(str);
+
+                    //cout<<"# ";
                     i++;
                     state = judge_type(s[i]);
                 }
                 else
                 {
                     cout<<"state8:";
-                    cout<<s[i]<<" ";
+                    token_queue.push(s[i]);
+                    string str = generate_token();
+                    token_inc(str);
+                    print_token(str);
+                    //cout<<s[i]<<" ";
                     i++;
                     state = judge_type(s[i]);
                 }
@@ -448,7 +566,11 @@ void analyze(char* s)
                     }
                     else
                     {
-                        cout<<"/ ";
+                        //cout<<"/ ";
+                        token_queue.push('/');
+                        string str = generate_token();
+                        token_inc(str);
+                        print_token(str);
                         state = judge_type(s[i]);
                     }
                 }/*
@@ -462,13 +584,17 @@ void analyze(char* s)
                 }*/
                 else if(s[i] == '<' && header_flag)
                 {
-                    cout<<"< (界符) ";
+                    //cout<<"< (界符) ";
+                    token_num[2]++;
+                    cout<<"<"<<"界符"<<" , "<<"<>"<<endl;
                     i++;
                     state = judge_type(s[i]);
                 }
                 else if(s[i] == '>' && header_flag)
                 {
-                    cout<<"> (界符) ";
+                    //cout<<"> (界符) ";
+                    token_num[2]++;
+                    cout<<"<"<<"界符"<<" , "<<">>"<<endl;
                     header_flag = false;
                     i++;
                     state = judge_type(s[i]);
@@ -484,14 +610,25 @@ void analyze(char* s)
                     {
                         token_queue.push(s[i]);
                         i++;
-                        state = judge_type(s[i]);
+                        state = judge_type(s[i]);/*
                         while(!token_queue.empty())
                         {
                         //cout<<"pop:";
                             cout<<token_queue.front();
                             token_queue.pop();
                         }
-                        cout<<" ";
+                        cout<<" ";*/
+                        string str = generate_token();
+                        if(token_in_table(str))
+                        {
+                            print_token(str);
+                            token_inc(str);
+                        }
+                        else
+                        {
+                            cout<<"unsupported operator \""<<str<<"\""<<endl;
+                        }
+                        
                     }
                 }
                 
@@ -565,7 +702,11 @@ int main()
     read_op_table("./operator_map.txt");
     read_tokens();
     read_token_map();
-    print_token_table();/*
+    //print_token_table();
+    char c[] = "a +++ &^*b\n";
+    analyze(c);
+    print_statistics();
+    /*
     char s[] = "# include <iostream>\n";
     fstream t("lexical_analyzer.cpp",ios::in|ios::out);
     char temp[1024];
