@@ -4,6 +4,10 @@
 # include <string>
 # include <fstream>
 
+# define OPERATOR_MAP_PATH "./doc/operator_map.txt"
+# define TOKEN_TABLE_PATH "./doc/tokens.txt"
+# define TOKEN_MAP_PATH "./doc/token_map.txt"
+
 //# define EOF 0
 
 using namespace std;
@@ -20,6 +24,7 @@ int number_num = 0;
 bool header_flag = false;
 bool crossing_flag = false;
 bool annotation = false;
+bool complete_info = false;
 
 void read_op_table(string path)
 {
@@ -42,7 +47,7 @@ void read_op_table(string path)
 
 void read_tokens()
 {
-    fstream t("./tokens.txt",ios::in|ios::out);
+    fstream t(TOKEN_TABLE_PATH,ios::in|ios::out);
     char temp[1024];
     while(t.getline(temp,1024))
     {
@@ -60,7 +65,7 @@ void read_tokens()
 
 void read_token_map()
 {
-    fstream t("./token_map.txt",ios::in|ios::out);
+    fstream t(TOKEN_MAP_PATH,ios::in|ios::out);
     char temp[1024];
     for(int i = 1; i <= 11; i++)
     {
@@ -85,12 +90,21 @@ void print_token_table()
 
 void print_statistics()
 {
+    int token_total = 0;
     cout<<endl<<"[数据统计]:"<<endl;
     for(int i = 1; i <= 11; i++)
     {
         cout<<token_type[i]<<": "<<token_num[i]<<'\t';
+        token_total += token_num[i];
     }
     cout<<"常数: "<<number_num<<endl<<endl;
+    cout<<"<总计>有效记号数: "<<token_total<<"\t"<<"行数: "<<line<<endl<<endl;
+}
+
+void print_err_info()
+{
+    cout<<endl<<"[错误信息]:"<<endl;
+    cout<<err_info<<endl;
 }
 
 void print_str(string s)
@@ -262,7 +276,7 @@ void analyze(char* s)
                 }
                 
                 break;
-            case 3:
+            case 3://识别到小数点
                 //cout<<"3->";
                 cout<<" state3:" ;
                 if(judge_type(s[i]) == 2)
@@ -275,6 +289,9 @@ void analyze(char* s)
                 {
                     i++;
                     state = 3;
+                    string temp_err;
+                    temp_err = "<WARNING>Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
+                    err_info += temp_err;
                     //ERR:出现多个连续小数点
                 }
                 else if(judge_type(s[i]) == 1)
@@ -305,6 +322,10 @@ void analyze(char* s)
                     string str = generate_token();
                     print_num(str);
                     number_num ++;
+
+                    string temp_err;
+                    temp_err = "<WARNING>Line" +  to_string(line) + ": Digit missing after float point, has taken as default \"" + str + "\"\n";
+                    err_info += temp_err;
                 }
                 break;
             case 4:
@@ -325,6 +346,10 @@ void analyze(char* s)
                 {
                     i++;
                     state = 4;
+
+                    string temp_err;
+                    temp_err = "<WARNING>Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
+                    err_info += temp_err;
                     //ERR
                 }
                 else if(judge_type(s[i]) == 1)
@@ -396,11 +421,15 @@ void analyze(char* s)
                         token_queue.pop();
                     }
                     //cout<<" ";
+                    string temp_err;
+                    temp_err = "<WARNING>Line" +  to_string(line) + ": Digit missing after 'e', has taken as default \"" + str + "\"\n";
+                    err_info += temp_err;
+
                     print_num(str);
                     number_num++;
                 }
                 break;
-            case 6:
+            case 6://1e+xxx
                 cout<<" state6:" ;
                 if(judge_type(s[i]) == 2)
                 {
@@ -413,7 +442,7 @@ void analyze(char* s)
                     state = 5;
                 }
                 break;
-            case 7:
+            case 7://1e-1xx
                 cout<<" state7:" ;
                 if(judge_type(s[i]) == 1)
                 {
@@ -436,6 +465,10 @@ void analyze(char* s)
                 {
                     state = 7;
                     i++;
+
+                    string temp_err;
+                    temp_err = "<WARNING>Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
+                    err_info += temp_err;
                     //ERR
                 }
                 else
@@ -454,10 +487,27 @@ void analyze(char* s)
                 }
                 break;
             case 8://界符
+                cout<<"state8:";
                 if(s[i] == '\'' || s[i] == '\"')//转义字符需要处理，不然字符串中的分号很可能被当作界符
                 {
-                    cout<<"state8:";
                     //cout<<s[i]<<" ";
+                    if(!token_queue.empty())
+                    {
+                        string str = generate_token();
+                        if(token_in_table(str))
+                        {
+                            print_token(str);
+                            token_inc(str);
+                        }
+                        else
+                        {
+                            string temp_err;
+                            temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
+                            err_info += temp_err;
+                            //cout<<"unsupported operator \""<<str<<"\""<<endl;
+                        }
+                    }
+
                     token_queue.push(s[i]);
                     string str = generate_token();
                     token_inc(str);
@@ -466,6 +516,16 @@ void analyze(char* s)
                     char crossing = s[i];
                     crossing_flag = true;
                     i++;
+
+                    if(s[i]=='\n')
+                    {
+                        over = true;
+                        crossing_flag = false;
+                        string temp_err;
+                        temp_err = "<WARNING>Line" +  to_string(line) + ": Quotation mark missing, has taken all content after the first quotation mark as a string.\n";
+                        err_info += temp_err; 
+                    }   
+
                     while(crossing_flag && s[i]!='\n')
                     {
                         if(s[i] == crossing)
@@ -496,6 +556,11 @@ void analyze(char* s)
                         else if(s[i+1] == '\n')//到行末也没有出现引号
                         {
                             crossing_flag = false;
+
+                            string temp_err;
+                            temp_err = "<WARNING>Line" +  to_string(line) + ": Quotation mark missing, has taken all content after the first quotation mark as a string.\n";
+                            err_info += temp_err;
+
                             token_queue.push(s[i]);/*
                             while(!token_queue.empty())
                             {
@@ -507,12 +572,20 @@ void analyze(char* s)
                             string str = generate_token();
                             string_inc();
                             print_str(str);
+
                             over = true;
-                        }
+                        }/*
+                        else if(s[i+1] == '\n' && s[i+2] != '\0')//字符串中有换行符，但未到代码行末
+                        {
+                            token_queue.push(s[i]);
+                            i++;
+                            token_queue.push(s[i]);
+                            i++;
+                        }*/
                         else
                         {
                             token_queue.push(s[i]);
-                            if(s[i] == '\\')
+                            if(s[i] == '\\')//处理转义引号的情况
                             {
                                 i++;
                                 token_queue.push(s[i]);
@@ -536,7 +609,7 @@ void analyze(char* s)
                 }
                 else
                 {
-                    cout<<"state8:";
+                    //cout<<"state8:";
                     token_queue.push(s[i]);
                     string str = generate_token();
                     token_inc(str);
@@ -547,18 +620,53 @@ void analyze(char* s)
                 }
                 break;
             case 9://运算符
-                //cout<<"case 9:";
+                cout<<"case 9:";
                 if(s[i] == '/')
                 {
                     i++;
                     if(s[i] == '*')
-                    {
+                    {         
+                        if(!token_queue.empty())
+                        {
+                            string str = generate_token();
+                            if(token_in_table(str))
+                            {
+                                print_token(str);
+                                token_inc(str);
+                            }
+                            else
+                            {
+                                string temp_err;
+                                temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
+                                err_info += temp_err;
+                                //cout<<"unsupported operator \""<<str<<"\""<<endl;
+                            }
+                        }
+
                         state = 10;
                         annotation = true;
                         i++;
                     }
                     else if(s[i] == '/')
+                    {
                         over = true;
+                        if(!token_queue.empty())
+                        {
+                            string str = generate_token();
+                            if(token_in_table(str))
+                            {
+                                print_token(str);
+                                token_inc(str);
+                            }
+                            else
+                            {
+                                string temp_err;
+                                temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
+                                err_info += temp_err;
+                                //cout<<"unsupported operator \""<<str<<"\""<<endl;
+                            }
+                        }
+                    }
                     else if(judge_type(s[i]) == 9)
                     {
                         token_queue.push('/');
@@ -626,7 +734,10 @@ void analyze(char* s)
                         }
                         else
                         {
-                            cout<<"unsupported operator \""<<str<<"\""<<endl;
+                            string temp_err;
+                            temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
+                            err_info += temp_err;
+                            //cout<<"unsupported operator \""<<str<<"\""<<endl;
                         }
                         
                     }
@@ -669,12 +780,11 @@ void analyze(char* s)
                 state = judge_type(s[i]);
                 cout<<"(ERR3) ";
                 break;
-            case -4:
+            case -4://退出状态
                 over = true;
                 break;
             case -5:
                 state = judge_type(s[i]);
-                cout<<"(ERR5) ";
                 break;
             case -6://错误，非法标识符
                 token_queue.push(s[i]);
@@ -684,13 +794,17 @@ void analyze(char* s)
                 else
                 {
                     state = judge_type(s[i]);
+                    string temp_str;
                     while(!token_queue.empty())
                     {
                         //cout<<"pop:";
-                        cout<<token_queue.front();
+                        temp_str += token_queue.front();
                         token_queue.pop();
                     }
-                    cout<<"(ERR0) ";
+                    string temp_err;
+                    temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported identifier \"" + temp_str + "\"\n";
+                    err_info += temp_err;
+                    //cout<<"(ERR0) ";
                 }
                 break;
         }
@@ -699,19 +813,24 @@ void analyze(char* s)
 
 int main()
 {
-    read_op_table("./operator_map.txt");
+    read_op_table(OPERATOR_MAP_PATH);
     read_tokens();
     read_token_map();
+    //freopen("./output.txt","w",stdout);
     //print_token_table();
-    char c[] = "a +++ &^*b\n";
+    line++;
+    char c[] = "a +++\"+ 1234basdsc\\n\"\n";
     analyze(c);
-    print_statistics();
+    print_err_info();
+    //print_statistics();
     /*
     char s[] = "# include <iostream>\n";
     fstream t("lexical_analyzer.cpp",ios::in|ios::out);
     char temp[1024];
     while (t.getline(temp,1024))
     {
+        line++;
+        cout<<"Line:"<<line<<endl;
         string s1 = temp;
         //cout<<"hey";
         int len = s1.length();
@@ -723,7 +842,9 @@ int main()
         cout << endl;
         //cout<<"hey";
     }
-    t.close();*/
+    t.close();
+    print_err_info();
+    print_statistics();*/
     //tokens["&"] = 3;
     //read_op_table("./operator_map.txt");
     //cout<<" next state:"<<judge_type(s[16]);

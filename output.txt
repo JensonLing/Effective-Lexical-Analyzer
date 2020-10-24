@@ -1,0 +1,4535 @@
+Line:1
+state8:header on<# , ->
+case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , include>
+case0:case 9:<界符 , <>
+case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , iostream>
+case 9:<界符 , >>
+
+Line:2
+state8:header on<# , ->
+case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , include>
+case0:case 9:<界符 , <>
+case1:case1:case1:<标识符 , map>
+case 9:<界符 , >>
+
+Line:3
+state8:header on<# , ->
+case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , include>
+case0:case 9:<界符 , <>
+case1:case1:case1:case1:case1:<标识符 , queue>
+case 9:<界符 , >>
+
+Line:4
+state8:header on<# , ->
+case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , include>
+case0:case 9:<界符 , <>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case 9:<界符 , >>
+
+Line:5
+state8:header on<# , ->
+case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , include>
+case0:case 9:<界符 , <>
+case1:case1:case1:case1:case1:case1:case1:<标识符 , fstream>
+case 9:<界符 , >>
+
+Line:6
+
+Line:7
+state8:header on<# , ->
+case0:case1:case1:case1:case1:case1:case1:<标识符 , define>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , OPERATOR_MAP_PATH>
+case0:state8:<界符 , ">
+<字符串 , ./doc/operator_map.txt>
+<界符 , ">
+
+Line:8
+state8:header on<# , ->
+case0:case1:case1:case1:case1:case1:case1:<标识符 , define>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , TOKEN_TABLE_PATH>
+case0:state8:<界符 , ">
+<字符串 , ./doc/tokens.txt>
+<界符 , ">
+
+Line:9
+state8:header on<# , ->
+case0:case1:case1:case1:case1:case1:case1:<标识符 , define>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , TOKEN_MAP_PATH>
+case0:state8:<界符 , ">
+<字符串 , ./doc/token_map.txt>
+<界符 , ">
+
+Line:10
+
+Line:11
+case 9:
+Line:12
+
+Line:13
+case1:case1:case1:case1:case1:<标识符 , using>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , namespace>
+case0:case1:case1:case1:<标识符 , std>
+state8:state8:<; , ->
+
+Line:14
+
+Line:15
+case1:case1:case1:<标识符 , map>
+case 9:<界符 , <>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+state8:state8:<, , ->
+case1:case1:case1:<保留字 , int>
+case 9:<界符 , >>
+case0:case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<; , ->
+case 9:
+Line:16
+case1:case1:case1:<标识符 , map>
+case 9:<关系运算符 , <>
+case1:case1:case1:<保留字 , int>
+state8:state8:<, , ->
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case 9:<关系运算符 , >>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_type>
+state8:state8:<; , ->
+case0:case 9:
+Line:17
+case1:case1:case1:<标识符 , map>
+case 9:<关系运算符 , <>
+case1:case1:case1:<保留字 , int>
+state8:state8:<, , ->
+case1:case1:case1:<保留字 , int>
+case 9:<关系运算符 , >>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_num>
+state8:state8:<; , ->
+case 9:
+Line:18
+case1:case1:case1:<标识符 , map>
+case 9:<关系运算符 , <>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+state8:state8:<, , ->
+case0:case1:case1:case1:<保留字 , int>
+case 9:<关系运算符 , >>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , operators>
+state8:state8:<; , ->
+case 9:
+Line:19
+case1:case1:case1:case1:case1:<标识符 , queue>
+case 9:<关系运算符 , <>
+case1:case1:case1:case1:<保留字 , char>
+case 9:<关系运算符 , >>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<; , ->
+
+Line:20
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , err_info>
+state8:state8:<; , ->
+
+Line:21
+case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:case1:<标识符 , line>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 0>
+state8:state8:<; , ->
+
+Line:22
+case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , number_num>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 0>
+state8:state8:<; , ->
+
+Line:23
+
+Line:24
+case1:case1:case1:case1:<标识符 , bool>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , header_flag>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:25
+case1:case1:case1:case1:<标识符 , bool>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , crossing_flag>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:26
+case1:case1:case1:case1:<标识符 , bool>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , annotation>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:27
+case1:case1:case1:case1:<标识符 , bool>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , complete_info>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:28
+
+Line:29
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , read_op_table>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:case1:<标识符 , path>
+state8:state8:<界符 , )>
+
+Line:30
+state8:state8:<界符 , {>
+
+Line:31
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , fstream>
+case0:case1:<标识符 , t>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , path>
+state8:state8:<, , ->
+case1:case1:case1:<标识符 , ios>
+state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:<标识符 , in>
+case 9:<位操作运算符 , |>
+case1:case1:case1:<标识符 , ios>
+state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:case1:<标识符 , out>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:32
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , char>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , [>
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , ]>
+state8:state8:<; , ->
+
+Line:33
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , out>
+state8:state8:<; , ->
+
+Line:34
+case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , while>
+state8:state8:<界符 , (>
+case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:case1:case1:<标识符 , getline>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<, , ->
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:35
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:36
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:case1:<标识符 , type>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , atoi>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:37
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:38
+case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:case1:case1:<标识符 , getline>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<, , ->
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:39
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<; , ->
+
+Line:40
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , operators>
+state8:state8:<界符 , [>
+case1:<标识符 , s>
+state8:state8:<界符 , ]>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , type>
+state8:state8:<; , ->
+
+Line:41
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:42
+
+Line:43
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:44
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:45
+case0:case0:case0:case0:case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , close>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:46
+state8:state8:<界符 , }>
+
+Line:47
+
+Line:48
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , read_tokens>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+
+Line:49
+state8:state8:<界符 , {>
+
+Line:50
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , fstream>
+case0:case1:<标识符 , t>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , TOKEN_TABLE_PATH>
+state8:state8:<, , ->
+case1:case1:case1:<标识符 , ios>
+state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:<标识符 , in>
+case 9:<位操作运算符 , |>
+case1:case1:case1:<标识符 , ios>
+state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:case1:<标识符 , out>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:51
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , char>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , [>
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , ]>
+state8:state8:<; , ->
+
+Line:52
+case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , while>
+state8:state8:<界符 , (>
+case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:case1:case1:<标识符 , getline>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<, , ->
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:53
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:54
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:case1:<标识符 , type>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , atoi>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:55
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:56
+case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:case1:case1:<标识符 , getline>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<, , ->
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:57
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<; , ->
+
+Line:58
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<界符 , [>
+case1:<标识符 , s>
+state8:state8:<界符 , ]>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , type>
+state8:state8:<; , ->
+
+Line:59
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:60
+
+Line:61
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:62
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:63
+case0:case0:case0:case0:case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , close>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:64
+state8:state8:<界符 , }>
+
+Line:65
+
+Line:66
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , read_token_map>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+
+Line:67
+state8:state8:<界符 , {>
+
+Line:68
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , fstream>
+case0:case1:<标识符 , t>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , TOKEN_MAP_PATH>
+state8:state8:<, , ->
+case1:case1:case1:<标识符 , ios>
+state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:<标识符 , in>
+case 9:<位操作运算符 , |>
+case1:case1:case1:<标识符 , ios>
+state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:case1:<标识符 , out>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:69
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , char>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , [>
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , ]>
+state8:state8:<; , ->
+
+Line:70
+case0:case0:case0:case0:case1:case1:case1:<保留字 , for>
+state8:state8:<界符 , (>
+case1:case1:case1:<保留字 , int>
+case0:case1:<标识符 , i>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 1>
+state8:state8:<; , ->
+case0:case1:<标识符 , i>
+case0:case 9:case 9:<关系运算符 , <=>
+case0: state2: state2:<常数 , 11>
+state8:state8:<; , ->
+case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<界符 , )>
+
+Line:71
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:72
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:73
+case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:case1:case1:<标识符 , getline>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<, , ->
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:74
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<; , ->
+
+Line:75
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_type>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:<赋值运算符 , =>
+case0:case1:<标识符 , s>
+state8:state8:<; , ->
+
+Line:76
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:77
+state8:state8:<界符 , }>
+
+Line:78
+
+Line:79
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token_table>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+
+Line:80
+state8:state8:<界符 , {>
+
+Line:81
+case0:case0:case0:case0:case1:case1:case1:<标识符 , map>
+case 9:<关系运算符 , <>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+state8:state8:<, , ->
+case0:case1:case1:case1:<保留字 , int>
+case 9:<关系运算符 , >>
+case0:state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , iterator>
+case0:case1:case1:case1:case1:<标识符 , iter>
+state8:state8:<; , ->
+
+Line:82
+case0:case0:case0:case0:case1:case1:case1:<保留字 , for>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , iter>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , begin>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+case0:case1:case1:case1:case1:<标识符 , iter>
+case0:case 9:case 9:<关系运算符 , !=>
+case0:case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<. , ->
+case1:case1:case1:<标识符 , end>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+case0:case1:case1:case1:case1:<标识符 , iter>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<界符 , )>
+
+Line:83
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:84
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , iter>
+case 9:case 9:<-> , ->
+case1:case1:case1:case1:case1:case1:<标识符 , second>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:85
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , '>
+<字符串 , <>
+<界符 , '>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:<标识符 , iter>
+case 9:case 9:<-> , ->
+case1:case1:case1:case1:case1:<标识符 , first>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_type>
+state8:state8:<界符 , [>
+case1:case1:case1:case1:<标识符 , iter>
+case 9:case 9:<-> , ->
+case1:case1:case1:case1:case1:case1:<标识符 , second>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , '>
+<字符串 , >>
+<界符 , '>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:86
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:87
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , '>
+<字符串 , <>
+<界符 , '>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_type>
+state8:state8:<界符 , [>
+case1:case1:case1:case1:<标识符 , iter>
+case 9:case 9:<-> , ->
+case1:case1:case1:case1:case1:case1:<标识符 , second>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:<标识符 , iter>
+case 9:case 9:<-> , ->
+case1:case1:case1:case1:case1:<标识符 , first>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , '>
+<字符串 , >>
+<界符 , '>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:88
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:89
+state8:state8:<界符 , }>
+
+Line:90
+
+Line:91
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_statistics>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+
+Line:92
+state8:state8:<界符 , {>
+
+Line:93
+case0:case0:case0:case0:case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_total>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 0>
+state8:state8:<; , ->
+
+Line:94
+case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , [数据统计]:>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:95
+case0:case0:case0:case0:case1:case1:case1:<保留字 , for>
+state8:state8:<界符 , (>
+case1:case1:case1:<保留字 , int>
+case0:case1:<标识符 , i>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 1>
+state8:state8:<; , ->
+case0:case1:<标识符 , i>
+case0:case 9:case 9:<关系运算符 , <=>
+case0: state2: state2:<常数 , 11>
+state8:state8:<; , ->
+case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<界符 , )>
+
+Line:96
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:97
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_type>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , : >
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_num>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , '>
+<字符串 , \t>
+<界符 , '>
+state8:state8:<; , ->
+
+Line:98
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_total>
+case0:case 9:case 9:<赋值运算符 , +=>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_num>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<; , ->
+
+Line:99
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:100
+case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , 常数: >
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , number_num>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:101
+case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , <总计>有效字符数: >
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_total>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , \t>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , 行数: >
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , line>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:102
+state8:state8:<界符 , }>
+
+Line:103
+
+Line:104
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_err_info>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+
+Line:105
+state8:state8:<界符 , {>
+
+Line:106
+case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , [错误信息]:>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:107
+case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , err_info>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:108
+state8:state8:<界符 , }>
+
+Line:109
+
+Line:110
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_str>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , )>
+
+Line:111
+state8:state8:<界符 , {>
+
+Line:112
+case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , <>
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , 字符串>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case0:case1:<标识符 , s>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , >>
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:113
+state8:state8:<界符 , }>
+
+Line:114
+
+Line:115
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , string_inc>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+
+Line:116
+state8:state8:<界符 , {>
+
+Line:117
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_num>
+state8:state8:<界符 , [>
+ state2: state2:<常数 , 11>
+state8:state8:<界符 , ]>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:118
+state8:state8:<界符 , }>
+
+Line:119
+
+Line:120
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , )>
+
+Line:121
+state8:state8:<界符 , {>
+
+Line:122
+case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<界符 , [>
+case1:<标识符 , s>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:123
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:124
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , '>
+<字符串 , <>
+<界符 , '>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:<标识符 , s>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_type>
+state8:state8:<界符 , [>
+ state2:<常数 , 1>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , '>
+<字符串 , >>
+<界符 , '>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:125
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:126
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<界符 , [>
+case1:<标识符 , s>
+state8:state8:<界符 , ]>
+case0:case 9:<关系运算符 , >>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:127
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:128
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , '>
+<字符串 , <>
+<界符 , '>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_type>
+state8:state8:<界符 , [>
+case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<界符 , [>
+case1:<标识符 , s>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:<标识符 , s>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , '>
+<字符串 , >>
+<界符 , '>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:129
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:130
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:131
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , <>
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , 标识符>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case0:case1:<标识符 , s>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , >>
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:132
+state8:state8:<界符 , }>
+
+Line:133
+
+Line:134
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_num>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , )>
+
+Line:135
+state8:state8:<界符 , {>
+
+Line:136
+case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , <>
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , 常数>
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:<标识符 , s>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:state8:<界符 , ">
+<字符串 , >>
+<界符 , ">
+case0:case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:137
+state8:state8:<界符 , }>
+
+Line:138
+
+Line:139
+case1:case1:case1:case1:<标识符 , bool>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_in_table>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , )>
+
+Line:140
+state8:state8:<界符 , {>
+
+Line:141
+case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<界符 , [>
+case1:<标识符 , s>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+
+Line:142
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:143
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:144
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:145
+state8:state8:<界符 , }>
+
+Line:146
+
+Line:147
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+
+Line:148
+state8:state8:<界符 , {>
+
+Line:149
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<; , ->
+
+Line:150
+case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , while>
+state8:state8:<界符 , (>
+case 9:<逻辑运算符 , !>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , empty>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:151
+case0:case0:case0:case0:state8:state8:<界符 , {>
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:152
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , temp>
+case0:case 9:case 9:<赋值运算符 , +=>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , front>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:153
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:<标识符 , pop>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:154
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:155
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<; , ->
+
+Line:156
+state8:state8:<界符 , }>
+
+Line:157
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , add_token>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , )>
+case 9:
+Line:158
+state8:state8:<界符 , {>
+
+Line:159
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<界符 , [>
+case1:<标识符 , s>
+state8:state8:<界符 , ]>
+case0:case 9:<赋值运算符 , =>
+case0: state2: state2:<常数 , 10>
+state8:state8:<; , ->
+
+Line:160
+state8:state8:<界符 , }>
+
+Line:161
+
+Line:162
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_inc>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , )>
+case 9:
+Line:163
+state8:state8:<界符 , {>
+
+Line:164
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_num>
+state8:state8:<界符 , [>
+case1:case1:case1:case1:case1:case1:<标识符 , tokens>
+state8:state8:<界符 , [>
+case1:<标识符 , s>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , ]>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:165
+state8:state8:<界符 , }>
+
+Line:166
+
+Line:167
+case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<保留字 , char>
+case0:case1:<标识符 , c>
+state8:state8:<界符 , )>
+
+Line:168
+state8:state8:<界符 , {>
+
+Line:169
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , char>
+case0:case1:case1:case1:case1:case1:case1:<标识符 , temp_c>
+state8:state8:<界符 , [>
+ state2:<常数 , 2>
+state8:state8:<界符 , ]>
+state8:state8:<; , ->
+
+Line:170
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , temp_c>
+state8:state8:<界符 , [>
+ state2:<常数 , 0>
+state8:state8:<界符 , ]>
+case0:case 9:<赋值运算符 , =>
+case0:case0:case1:<标识符 , c>
+state8:state8:<; , ->
+
+Line:171
+
+Line:172
+case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , annotation>
+state8:state8:<界符 , )>
+
+Line:173
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0: state2: state2:<常数 , 10>
+state8:state8:<; , ->
+
+Line:174
+
+Line:175
+case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , c>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 ,  >
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:176
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0: state2:<常数 , 0>
+state8:state8:<; , ->
+
+Line:177
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , c>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , _>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , ||>
+case0:state8:state8:<界符 , (>
+case1:<标识符 , c>
+case0:case 9:case 9:<关系运算符 , >=>
+case0:state8:<界符 , '>
+<字符串 , a>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , &&>
+case0:case1:<标识符 , c>
+case0:case 9:case 9:<关系运算符 , <=>
+case0:state8:<界符 , '>
+<字符串 , z>
+<界符 , '>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<逻辑运算符 , ||>
+case0:state8:state8:<界符 , (>
+case1:<标识符 , c>
+case 9:case 9:<关系运算符 , >=>
+state8:<界符 , '>
+<字符串 , A>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , &&>
+case0:case1:<标识符 , c>
+case0:case 9:case 9:<关系运算符 , <=>
+case0:state8:<界符 , '>
+<字符串 , Z>
+<界符 , '>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:178
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0: state2:<常数 , 1>
+state8:state8:<; , ->
+
+Line:179
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , c>
+case 9:case 9:<关系运算符 , >=>
+state8:<界符 , '>
+<字符串 , 0>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , &&>
+case0:case1:<标识符 , c>
+case 9:case 9:<关系运算符 , <=>
+state8:<界符 , '>
+<字符串 , 9>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:180
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0: state2:<常数 , 2>
+state8:state8:<; , ->
+
+Line:181
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , operators>
+state8:state8:<界符 , [>
+case1:case1:case1:case1:case1:case1:<标识符 , temp_c>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+
+Line:182
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , operators>
+state8:state8:<界符 , [>
+case1:case1:case1:case1:case1:case1:<标识符 , temp_c>
+state8:state8:<界符 , ]>
+state8:state8:<; , ->
+
+Line:183
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , c>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:case1:case1:case1:<标识符 , EOF>
+state8:state8:<界符 , )>
+
+Line:184
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 1>
+state8:state8:<; , ->
+
+Line:185
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , c>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , \n>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:186
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 4>
+state8:state8:<; , ->
+
+Line:187
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:188
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , return>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 2>
+state8:state8:<; , ->
+
+Line:189
+state8:state8:<界符 , }>
+
+Line:190
+
+Line:191
+case1:case1:case1:case1:<保留字 , void>
+case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , analyze>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<保留字 , char>
+case 9:<* , ->
+case0:case1:<标识符 , s>
+state8:state8:<界符 , )>
+
+Line:192
+state8:state8:<界符 , {>
+
+Line:193
+case0:case0:case0:case0:case1:case1:case1:<保留字 , int>
+case0:case1:<标识符 , i>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 0>
+state8:state8:<; , ->
+
+Line:194
+case0:case0:case0:case0:case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:195
+case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , bool>
+case0:case1:case1:case1:case1:<标识符 , over>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:196
+case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , while>
+state8:state8:<界符 , (>
+case 9:<逻辑运算符 , !>
+case1:case1:case1:case1:<标识符 , over>
+state8:state8:<界符 , )>
+
+Line:197
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:198
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:199
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:200
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<保留字 , switch>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:<标识符 , state>
+state8:state8:<界符 , )>
+
+Line:201
+case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:202
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 0>
+state8:state8:<: , ->
+case 9:
+Line:203
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , case0:>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:204
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:205
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:206
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:207
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:208
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 1>
+state8:state8:<: , ->
+
+Line:209
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , case1:>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:210
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:211
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:212
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:213
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+case0:case 9:case 9:<逻辑运算符 , ||>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 2>
+state8:state8:<界符 , )>
+
+Line:214
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:215
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 1>
+state8:state8:<; , ->
+
+Line:216
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:217
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:218
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:219
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:case 10:
+Line:220
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:221
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:222
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:223
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:224
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:225
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:226
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:227
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:228
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case 9:<逻辑运算符 , !>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_in_table>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:229
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , add_token>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:230
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:231
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_inc>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:232
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:233
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:234
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:235
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:236
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 2>
+state8:state8:<: , ->
+
+Line:237
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:238
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  state2:>
+<界符 , ">
+case0:state8:state8:<; , ->
+
+Line:239
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:240
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:241
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:242
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 2>
+state8:state8:<界符 , )>
+
+Line:243
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 2>
+state8:state8:<; , ->
+
+Line:244
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , .>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:245
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:246
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:247
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:248
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:249
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:250
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 3>
+state8:state8:<; , ->
+
+Line:251
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:252
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , e>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:253
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:254
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:255
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:256
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 5>
+state8:state8:<; , ->
+
+Line:257
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:258
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:259
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:260
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 6>
+state8:state8:<; , ->
+
+Line:261
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:262
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:263
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:264
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:265
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:case 10:
+Line:266
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:267
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:268
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:269
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:270
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:271
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:272
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:273
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , number_num>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:274
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:275
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_num>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:276
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:277
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:
+Line:278
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:279
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 3>
+state8:state8:<: , ->
+
+Line:280
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:281
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  state3:>
+<界符 , ">
+case0:state8:state8:<; , ->
+
+Line:282
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 2>
+state8:state8:<界符 , )>
+
+Line:283
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:284
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:285
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:286
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 4>
+state8:state8:<; , ->
+
+Line:287
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:288
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , .>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:289
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:290
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:291
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 3>
+state8:state8:<; , ->
+
+Line:292
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:293
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:294
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:295
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:296
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:297
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 6>
+state8:state8:<; , ->
+case 9:case 10:
+Line:298
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:299
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:300
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:301
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:302
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:303
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:304
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:305
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:306
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:307
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:308
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+state8:<界符 , '>
+<字符串 , 0>
+<界符 , '>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:309
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:310
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 5>
+state8:state8:<; , ->
+case 9:
+Line:311
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:case 10:
+Line:312
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:313
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:314
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:315
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:316
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:317
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:318
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:319
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:320
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_num>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:321
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , number_num>
+case0:case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:322
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:323
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:324
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 4>
+state8:state8:<: , ->
+
+Line:325
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  state4:>
+<界符 , ">
+case0:state8:state8:<; , ->
+
+Line:326
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 2>
+state8:state8:<界符 , )>
+
+Line:327
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:328
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:329
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:330
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 4>
+state8:state8:<; , ->
+case 9:
+Line:331
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:332
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , e>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:333
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:334
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:335
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:336
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 5>
+state8:state8:<; , ->
+
+Line:337
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:338
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , .>
+<界符 , '>
+state8:state8:<界符 , )>
+case 9:
+Line:339
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:340
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:341
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 4>
+state8:state8:<; , ->
+
+Line:342
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:343
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:344
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:345
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:346
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 6>
+state8:state8:<; , ->
+case 9:case 10:
+Line:347
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:348
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:349
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:350
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:351
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:352
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:353
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:354
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:355
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:356
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:357
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:358
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:359
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:case 10:
+Line:360
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:361
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:362
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:363
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:364
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:365
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:366
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:367
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:368
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_num>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:369
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , number_num>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:370
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:371
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:372
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:373
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 5>
+state8:state8:<: , ->
+
+Line:374
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  state5:>
+<界符 , ">
+case0:state8:state8:<; , ->
+
+Line:375
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , +>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , ||>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , ->
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:376
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:377
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:378
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:379
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 6>
+state8:state8:<; , ->
+
+Line:380
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:381
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 2>
+state8:state8:<界符 , )>
+
+Line:382
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:383
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:384
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:385
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 7>
+state8:state8:<; , ->
+
+Line:386
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:387
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:388
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:389
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 6>
+state8:state8:<; , ->
+case 9:case 10:
+Line:390
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:391
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:392
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:393
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:394
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:395
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:396
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:397
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:398
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:399
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:400
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:401
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:402
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:403
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 5>
+state8:state8:<; , ->
+
+Line:404
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+state8:state8:<; , ->
+
+Line:405
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , while>
+state8:state8:<界符 , (>
+case 9:<逻辑运算符 , !>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , empty>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:406
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:407
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:408
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , front>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , !=>
+case0:state8:<界符 , '>
+<字符串 , e>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , &&>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , front>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , !=>
+case0:state8:<界符 , '>
+<字符串 , +>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , &&>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , front>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , !=>
+case0:state8:<界符 , '>
+<字符串 , ->
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:409
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:<标识符 , str>
+case0:case 9:case 9:<赋值运算符 , +=>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , front>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:410
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:<标识符 , pop>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:411
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:412
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:413
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_num>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:414
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , number_num>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:415
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:416
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:417
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 6>
+state8:state8:<: , ->
+
+Line:418
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  state6:>
+<界符 , ">
+case0:state8:state8:<; , ->
+
+Line:419
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 2>
+state8:state8:<界符 , )>
+
+Line:420
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:421
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:422
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:423
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 7>
+state8:state8:<; , ->
+
+Line:424
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:425
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:426
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:427
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 5>
+state8:state8:<; , ->
+
+Line:428
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:429
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:430
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 7>
+state8:state8:<: , ->
+
+Line:431
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  state7:>
+<界符 , ">
+case0:state8:state8:<; , ->
+
+Line:432
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:433
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:434
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 6>
+state8:state8:<; , ->
+case 9:case 10:
+Line:435
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:436
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:437
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:438
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:439
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:440
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:441
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:442
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:443
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 2>
+state8:state8:<界符 , )>
+
+Line:444
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:445
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 7>
+state8:state8:<; , ->
+
+Line:446
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:447
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:448
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:449
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , .>
+<界符 , '>
+state8:state8:<界符 , )>
+case 9:
+Line:450
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:451
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 7>
+state8:state8:<; , ->
+
+Line:452
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:453
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:454
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:455
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:456
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:457
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+case 9:case 10:
+Line:458
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:459
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:460
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:461
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:462
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:463
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:464
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:465
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:466
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_num>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:467
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , number_num>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:468
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:469
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:470
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 8>
+state8:state8:<: , ->
+case 9:
+Line:471
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , state8:>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:472
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , \'>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , ||>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , \">
+<界符 , '>
+state8:state8:<界符 , )>
+case 9:
+Line:473
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:474
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:475
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:476
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:477
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_inc>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:478
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:479
+
+Line:480
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , char>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , crossing>
+case0:case 9:<赋值运算符 , =>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<; , ->
+
+Line:481
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , crossing_flag>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:482
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:483
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , while>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , crossing_flag>
+case0:case 9:case 9:<逻辑运算符 , &&>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case 9:case 9:<关系运算符 , !=>
+state8:<界符 , '>
+<字符串 , \n>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:484
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:485
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , crossing>
+state8:state8:<界符 , )>
+
+Line:486
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:487
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , crossing_flag>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:488
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:489
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+case0:case 9:case 9:<关系运算符 , !=>
+case0:state8:<界符 , ">
+<界符 , ">
+state8:state8:<界符 , )>
+
+Line:490
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:491
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , string_inc>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:492
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_str>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:493
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:494
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:case 10:
+Line:495
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:496
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:497
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:498
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:499
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:500
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:501
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:502
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:503
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:504
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_inc>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:505
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:506
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:507
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:508
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:509
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:510
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+case 9:<算术运算符 , +>
+ state2:<常数 , 1>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , \n>
+<界符 , '>
+state8:state8:<界符 , )>
+case 9:
+Line:511
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:512
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , crossing_flag>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:513
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+case 9:case 10:
+Line:514
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:515
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:516
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:517
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:518
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:519
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:520
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:521
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:522
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , string_inc>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:523
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_str>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:524
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , over>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:525
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:526
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:527
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:528
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:529
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , \\>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:530
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:531
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:532
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:533
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:534
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:535
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:536
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:537
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:538
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , #>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:539
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:540
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , header_flag>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:541
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , header on>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:542
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:543
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:544
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_inc>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:545
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:546
+
+Line:547
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:548
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:549
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:550
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:551
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:552
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:553
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , state8:>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:554
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:555
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:556
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_inc>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:557
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:558
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:559
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:560
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:561
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:562
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:563
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2:<常数 , 9>
+state8:state8:<: , ->
+case 9:
+Line:564
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , case 9:>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:565
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , />
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:566
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:567
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:568
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , *>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:569
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:570
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2: state2:<常数 , 10>
+state8:state8:<; , ->
+
+Line:571
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , annotation>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:572
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:573
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:574
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , />
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:575
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , over>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:576
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 9>
+state8:state8:<界符 , )>
+
+Line:577
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:578
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+state8:<界符 , '>
+<字符串 , />
+<界符 , '>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:579
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 9>
+state8:state8:<; , ->
+
+Line:580
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:581
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:582
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:583
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:584
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+state8:<界符 , '>
+<字符串 , />
+<界符 , '>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:585
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:586
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_inc>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:587
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:588
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:589
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:590
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+case 9:case 10:
+Line:591
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:592
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:593
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:594
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:595
+case 10:
+Line:596
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:597
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:598
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:599
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , <>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , &&>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , header_flag>
+state8:state8:<界符 , )>
+
+Line:600
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:601
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:602
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_num>
+state8:state8:<界符 , [>
+ state2:<常数 , 2>
+state8:state8:<界符 , ]>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:603
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , <>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , 界符>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , <>>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:604
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:605
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:606
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:607
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , >>
+<界符 , '>
+case0:case 9:case 9:<逻辑运算符 , &&>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , header_flag>
+state8:state8:<界符 , )>
+
+Line:608
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:609
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:610
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_num>
+state8:state8:<界符 , [>
+ state2:<常数 , 2>
+state8:state8:<界符 , ]>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:611
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , <>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , 界符>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 ,  , >
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , >>>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:612
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , header_flag>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:613
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:614
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:615
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:616
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:617
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:618
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+case 9:<算术运算符 , +>
+ state2:<常数 , 1>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 9>
+state8:state8:<界符 , )>
+
+Line:619
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:620
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:621
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:622
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:623
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:624
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:625
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:626
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:627
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+case 9:case 10:
+Line:628
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:629
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:630
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:631
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:632
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:633
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:634
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:635
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:case1:<标识符 , str>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , generate_token>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:636
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_in_table>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:637
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:638
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_token>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:639
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_inc>
+state8:state8:<界符 , (>
+case1:case1:case1:<标识符 , str>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:640
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:641
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:642
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:643
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , unsupported operator \">
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:<标识符 , str>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , \">
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:644
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:645
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:
+Line:646
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:647
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:648
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:
+Line:649
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:650
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2: state2:<常数 , 10>
+state8:state8:<: , ->
+case 9:
+Line:651
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , case 10:>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:652
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , \n>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:653
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , over>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:654
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , *>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:655
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:656
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2: state2:<常数 , 11>
+state8:state8:<; , ->
+
+Line:657
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:658
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:659
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:660
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:661
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:662
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:663
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:
+Line:664
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:665
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0: state2: state2:<常数 , 11>
+state8:state8:<: , ->
+
+Line:666
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , case 11:>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:667
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , />
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:668
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:669
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , annotation>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:<标识符 , false>
+state8:state8:<; , ->
+
+Line:670
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:671
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:672
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:673
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+case0:case 9:case 9:<关系运算符 , ==>
+case0:state8:<界符 , '>
+<字符串 , \n>
+<界符 , '>
+state8:state8:<界符 , )>
+
+Line:674
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , over>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:675
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:676
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:677
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0: state2: state2:<常数 , 10>
+state8:state8:<; , ->
+
+Line:678
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:679
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:680
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:681
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 3>
+state8:state8:<: , ->
+
+Line:682
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:683
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:684
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , (ERR3) >
+<界符 , ">
+state8:state8:<; , ->
+
+Line:685
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:686
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 4>
+state8:state8:<: , ->
+case 9:
+Line:687
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , over>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , true>
+state8:state8:<; , ->
+
+Line:688
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:689
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 5>
+state8:state8:<: , ->
+
+Line:690
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:691
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , (ERR5) >
+<界符 , ">
+state8:state8:<; , ->
+
+Line:692
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:693
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , case>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 6>
+state8:state8:<: , ->
+case 9:
+Line:694
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:<标识符 , push>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:695
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:<标识符 , i>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:696
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:<保留字 , if>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+case0:case 9:case 9:<关系运算符 , ==>
+case0: state2:<常数 , 1>
+state8:state8:<界符 , )>
+
+Line:697
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case 9:<算术运算符 , ->
+ state2:<常数 , 6>
+state8:state8:<; , ->
+
+Line:698
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , else>
+
+Line:699
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:700
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<标识符 , state>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , judge_type>
+state8:state8:<界符 , (>
+case1:<标识符 , s>
+state8:state8:<界符 , [>
+case1:<标识符 , i>
+state8:state8:<界符 , ]>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:701
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , while>
+state8:state8:<界符 , (>
+case 9:<逻辑运算符 , !>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , empty>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:702
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:703
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:704
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , front>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:705
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , token_queue>
+state8:state8:<. , ->
+case1:case1:case1:<标识符 , pop>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:706
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:707
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , (ERR0) >
+<界符 , ">
+state8:state8:<; , ->
+
+Line:708
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:709
+case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , break>
+state8:state8:<; , ->
+
+Line:710
+case0:case0:case0:case0:case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:711
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:712
+state8:state8:<界符 , }>
+
+Line:713
+
+Line:714
+case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:case1:<标识符 , main>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+
+Line:715
+state8:state8:<界符 , {>
+
+Line:716
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , read_op_table>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , OPERATOR_MAP_PATH>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:717
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , read_tokens>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:718
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , read_token_map>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:719
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , freopen>
+state8:state8:<界符 , (>
+state8:<界符 , ">
+<字符串 , ./output.txt>
+<界符 , ">
+state8:state8:<, , ->
+state8:<界符 , ">
+<字符串 , w>
+<界符 , ">
+state8:state8:<, , ->
+case1:case1:case1:case1:case1:case1:<标识符 , stdout>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:720
+case0:case0:case0:case0:case 9:
+Line:721
+case0:case0:case0:case0:case 9:
+Line:722
+case0:case0:case0:case0:case 9:
+Line:723
+case0:case0:case0:case0:case 9:
+Line:724
+case0:case0:case0:case0:
+Line:725
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , char>
+case0:case1:<标识符 , s>
+state8:state8:<界符 , [>
+state8:state8:<界符 , ]>
+case0:case 9:<赋值运算符 , =>
+case0:state8:<界符 , ">
+<字符串 , # include <iostream>\n>
+<界符 , ">
+state8:state8:<; , ->
+
+Line:726
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , fstream>
+case0:case1:<标识符 , t>
+state8:state8:<界符 , (>
+state8:<界符 , ">
+<字符串 , lexical_analyzer.cpp>
+<界符 , ">
+state8:state8:<, , ->
+case1:case1:case1:<标识符 , ios>
+state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:<标识符 , in>
+case 9:<位操作运算符 , |>
+case1:case1:case1:<标识符 , ios>
+state8:state8:<: , ->
+state8:state8:<: , ->
+case1:case1:case1:<标识符 , out>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:727
+case0:case0:case0:case0:case1:case1:case1:case1:<保留字 , char>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , [>
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , ]>
+state8:state8:<; , ->
+
+Line:728
+case0:case0:case0:case0:case1:case1:case1:case1:case1:<保留字 , while>
+case0:state8:state8:<界符 , (>
+case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:case1:case1:<标识符 , getline>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<, , ->
+ state2: state2: state2: state2:<常数 , 1024>
+state8:state8:<界符 , )>
+state8:state8:<界符 , )>
+
+Line:729
+case0:case0:case0:case0:state8:state8:<界符 , {>
+
+Line:730
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , line>
+case 9:case 9:<算术运算符 , ++>
+state8:state8:<; , ->
+
+Line:731
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case 9:case 9:<位操作运算符 , <<>
+state8:<界符 , ">
+<字符串 , Line:>
+<界符 , ">
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , line>
+case 9:case 9:<位操作运算符 , <<>
+case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:732
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:<标识符 , string>
+case0:case1:case1:<标识符 , s1>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<; , ->
+
+Line:733
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:734
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:<保留字 , int>
+case0:case1:case1:case1:<标识符 , len>
+case0:case 9:<赋值运算符 , =>
+case0:case1:case1:<标识符 , s1>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:case1:<标识符 , length>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:735
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:736
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , [>
+case1:case1:case1:<标识符 , len>
+state8:state8:<界符 , ]>
+case0:case 9:<赋值运算符 , =>
+case0:state8:<界符 , '>
+<字符串 , \n>
+<界符 , '>
+state8:state8:<; , ->
+
+Line:737
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:738
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , [>
+case1:case1:case1:<标识符 , len>
+case 9:<算术运算符 , +>
+ state2:<常数 , 1>
+state8:state8:<界符 , ]>
+case0:case 9:<赋值运算符 , =>
+case0: state2:<常数 , 0>
+state8:state8:<; , ->
+
+Line:739
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:<标识符 , analyze>
+state8:state8:<界符 , (>
+case1:case1:case1:case1:<标识符 , temp>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:740
+case0:case0:case0:case0:case0:case0:case0:case0:case1:case1:case1:case1:<标识符 , cout>
+case0:case 9:case 9:<位操作运算符 , <<>
+case0:case1:case1:case1:case1:<标识符 , endl>
+state8:state8:<; , ->
+
+Line:741
+case0:case0:case0:case0:case0:case0:case0:case0:case 9:
+Line:742
+case0:case0:case0:case0:state8:state8:<界符 , }>
+
+Line:743
+case0:case0:case0:case0:case1:<标识符 , t>
+state8:state8:<. , ->
+case1:case1:case1:case1:case1:<标识符 , close>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:744
+case0:case0:case0:case0:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:case1:<标识符 , print_statistics>
+state8:state8:<界符 , (>
+state8:state8:<界符 , )>
+state8:state8:<; , ->
+
+Line:745
+case0:case0:case0:case0:case 9:
+Line:746
+case0:case0:case0:case0:case 9:
+Line:747
+case0:case0:case0:case0:case 9:
+Line:748
+case0:case0:case0:case0:case 9:
+Line:749
+case0:case0:case0:case0:case 9:
+Line:750
+case0:case0:case0:case0:case 9:
+Line:751
+case0:case0:case0:case0:case 9:
+Line:752
+case0:case0:case0:case0:case 9:case 10:
+Line:753
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:754
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:755
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:756
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:757
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:758
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:759
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:760
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:761
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:762
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:763
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:764
+case0:case0:case0:case0:case 9:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:765
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:
+Line:766
+case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 10:case 11:
+Line:767
+state8:state8:<界符 , }>
+
+
+[数据统计]:
+-: 405	界符: 1034	算术运算符: 64	关系运算符: 70	逻辑运算符: 18	位操作运算符: 104	赋值运算符: 100	条件运算符: 0	保留字: 193	标识符: 804	字符串: 106	常数: 98
+
+<总计>有效字符数: 2898	行数: 767
