@@ -5,7 +5,7 @@
 |        *         * * * *      *      * * * *    *              |
 |        *         *           *  *    *          *              |
 |        * * * *   * * * *    *    *   * * * *    * * * *        |
-|                        VERSION 1.7                             |
+|                        VERSION 1.8                             |
 |          A Lexical Analyzer Written by Jerison Ling            |
 |                                                                |
 |              Email: lingjie981119@bupt.edu.cn                  |
@@ -29,11 +29,11 @@ e.g. lexical_analyzer.exe -o temp.txt analyze lexical_analyzer.cpp
 --pure        Output only token information
 --complete    Output complete information
 
-<COMMANDS>
+<COMMANDS>:
 analyze       Specify a C/C++ file and start analysis
 token-table   Show all supported token types
 
-<TIPS>
+<TIPS>:
 For any messy code existing in output, it's probably caused by some
 encoding problem (utf-8 v.s. GBK, you know). Executing "chcp 65001"
 before you run the program should help.
