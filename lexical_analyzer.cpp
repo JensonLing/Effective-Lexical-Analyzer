@@ -16,10 +16,12 @@ map<string,int> tokens;//包含所有可识别的符号及保留字，可添加
 map<int,string> token_type; //数字所代表的符号类型，固定
 map<int,int> token_num;//用以统计各类型记号的出现次数
 map<string, int> operators;//存储单词首字母与初入状态间的映射关系
-queue<char> token_queue;
-string err_info;
+queue<char> token_queue;//单词队列
+
+string err_info;//错误信息
 int line = 0;
 int number_num = 0;
+int char_num = 0;
 
 bool header_flag = false;
 bool crossing_flag = false;
@@ -28,7 +30,6 @@ bool complete_info = false;
 bool show_line_num = true;
 bool q_empty = false;
 bool out_of_case = false;
-//bool Hex_Num = false;
 
 void read_op_table(string path)
 {
@@ -103,7 +104,7 @@ void print_statistics()
     }
     token_total += number_num;
     cout<<"常数: "<<number_num<<endl<<endl;
-    cout<<"<总计>有效记号数: "<<token_total<<"\t"<<"行数: "<<line<<endl<<endl;
+    cout<<"<总计>有效记号数: "<<token_total<<"\t"<<"行数: "<<line<<"\t"<<"字符数: "<<char_num<<endl<<endl;
 }
 
 void print_err_info()
@@ -884,6 +885,11 @@ void analyze(char* s)
                     i++;
                 }
                 break;
+            case -2:
+                err_info +="<ERROR> Line" + to_string(line) +": "+"Encounter invalid character!\n";
+                i++;
+                state = judge_type(s[i]);
+                break;
             case -3:
                 i++;
                 state = judge_type(s[i]);
@@ -1010,6 +1016,7 @@ int main(int argc, char *argv[])
         string s1 = temp;
         //cout<<"hey";
         int len = s1.length();
+        char_num += len;
         //cout<<len;
         temp[len] = '\n';
         //cout<<"hey";
@@ -1028,28 +1035,4 @@ int main(int argc, char *argv[])
         print_err_info();
         print_statistics();
     }
-    //print_token_table();
-    //tokens["&"] = 3;
-    //read_op_table("./operator_map.txt");
-    //cout<<" next state:"<<judge_type(s[16]);
-    //cout<<" annotation: "<<annotation;
-    //analyze(s);
-    //cout<<operators["+"];
-    //read_op_table("./temp.txt");
-    /*
-    map<string,int> temp;
-    map<string,string> lex;
-    temp["A"] = 1;
-    temp["A"] ++;
-    lex["A"] = "char";
-    temp["B"]++;
-    //cout<<temp["B"];
-    map<string, int> ::iterator iter; 
-    for(iter = temp.begin(); iter != temp.end(); iter++)
-      cout << iter->first << " " << iter->second <<" "<<lex[iter->first]<< endl;
-      */
-    /*map<string, int> ::iterator iter; 
-    for(iter = operators.begin(); iter != operators.end(); iter++)
-        cout << iter->first << " " << iter->second << endl;*/
-    system("pause");
 }
