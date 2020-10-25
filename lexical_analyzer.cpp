@@ -392,16 +392,16 @@ void analyze(char* s)
                     token_queue.push(s[i]);
                     i++;
                     state = 4;
-                }
+                }/*
                 else if(s[i] == '.')
                 {
-                    i++;
-                    state = 3;
+                    //i++;
+                    state = judge_type(s[i]);
                     string temp_err;
                     temp_err = "<WARNING> Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
                     err_info += temp_err;
                     //ERR:出现多个连续小数点
-                }
+                }*/
                 else if(judge_type(s[i]) == 1)
                 {
                     //token_queue.push('0');
@@ -449,17 +449,17 @@ void analyze(char* s)
                     token_queue.push(s[i]);
                     i++;
                     state = 5;
-                }
+                }/*
                 else if(s[i] == '.')//小数点后又出现小数点，仅第一个小数点有效
                 {
-                    i++;
-                    state = 4;
+                    //i++;
+                    state = judge_type(s[i]);
 
                     string temp_err;
                     temp_err = "<WARNING> Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
                     err_info += temp_err;
                     //ERR
-                }
+                }*/
                 else if(judge_type(s[i]) == 1)
                 {
                     state = -6;/*
