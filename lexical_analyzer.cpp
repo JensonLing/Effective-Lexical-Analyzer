@@ -26,6 +26,9 @@ bool crossing_flag = false;
 bool annotation = false;
 bool complete_info = false;
 bool show_line_num = true;
+bool q_empty = false;
+bool out_of_case = false;
+//bool Hex_Num = false;
 
 void read_op_table(string path)
 {
@@ -98,6 +101,7 @@ void print_statistics()
         cout<<token_type[i]<<": "<<token_num[i]<<'\t';
         token_total += token_num[i];
     }
+    token_total += number_num;
     cout<<"常数: "<<number_num<<endl<<endl;
     cout<<"<总计>有效记号数: "<<token_total<<"\t"<<"行数: "<<line<<endl<<endl;
 }
@@ -194,6 +198,7 @@ void analyze(char* s)
     int i = 0;
     int state = judge_type(s[i]);
     bool over = false;
+    //bool Hex_Flag = true;
     while(!over)
     {
         //state = judge_type(s[i]);
@@ -237,9 +242,111 @@ void analyze(char* s)
             case 2:
                 //cout<<"2->"<<"pushed:"<<s[i]<<'~';
                 if(complete_info)cout<<"==>state2:" ;
+                q_empty = token_queue.empty();
                 token_queue.push(s[i]);
                 //cout<<"front:"<<token_queue.front()<<'~';
+                out_of_case = false;
+                if(q_empty && s[i] == '0' && s[i + 1] == 'x')//判断16进制数,判断0x是否出现在首部
+                {
+                    bool point_flag = true;
+                    out_of_case = true;
+
+                    i++;
+                    token_queue.push(s[i]);
+                    i++;//指向0x后第一个数
+                    if(s[i]=='.')//处理0x.的情况
+                    {
+                        token_queue.push('0');
+                        string temp_err;
+                        temp_err = "<WARNING> Line" +  to_string(line) + ": Digit missing before float point, has taken as a pure float number.\n";
+                        err_info += temp_err;
+                    }
+                        //token_queue.push(s[i]);
+                        while(judge_type(s[i]) == 2 || (s[i] <= 'f' && s[i] >= 'a') || (s[i]<='F' && s[i]>='A')||(s[i] == '.' && point_flag))
+                        {
+                            if(s[i] == '.' && point_flag)
+                            {
+                                token_queue.push(s[i]);
+                                i++;
+                                point_flag = false;
+
+                            }
+                            else
+                            {
+                                token_queue.push(s[i]);
+                                i++;
+                            }
+                            
+                        }
+
+                        int last = i - 1;
+                        if(s[last] == '.')
+                        {
+                            token_queue.push('0');
+                            string temp_err;
+                            temp_err = "<WARNING> Line" + to_string(line) + ": Digit missing after float point, has added '0' to the lowest digit.\n";
+                            err_info += temp_err;
+                        }
+                        else if(s[last] == 'x')
+                        {
+                            token_queue.push('0');
+                            string temp_err;
+                            temp_err = "<WARNING> Line" + to_string(line) + ": Digit missing after '0x', has taken as default '0x0'.\n";
+                            err_info += temp_err;
+                        }
+
+                        state = judge_type(s[i]);
+                        if(state != 1)
+                        {
+                            number_num++;
+                            string str = generate_token();
+                            print_num(str);
+                        }
+                        else
+                        {
+                            state = -6;
+                        }
+                        //break;
+                        //state = 2;
+
+                    /*
+                    else if(judge_type(s[i + 2]) == 1)
+                    {
+                        //token_queue.push(s[i]);
+                        i++;
+                        token_queue.push(s[i]);
+                        //state = -6;
+                    }*/
+                    /*
+                    else if(s[i + 2] == '.')
+                    {
+                        //token_queue.push(s[i]);
+                        i++;
+                        token_queue.push(s[i]);
+                        token_queue.push('0');
+                        string temp_err;
+                        temp_err = "<WARNING> Line" +  to_string(line) + ": Digit missing before float point, has taken as a pure float number.\n";
+                        err_info += temp_err;
+                    }*/
+                    /*
+                    else
+                    {
+                        //token_queue.push(s[i]);
+                        i++;
+                        token_queue.push(s[i]);
+                        token_queue.push('0');
+                        string temp_err;
+                        temp_err = "<WARNING> Line" +  to_string(line) + ": Digit missing after '0x', has taken as default '0x0'.\n";
+                        err_info += temp_err;
+                    }*/
+                    
+                    
+                }
+                //token_queue.push(s[i]);
+                if(out_of_case) break;
+
                 i++;
+                //cout<<"fail!";
                 if(judge_type(s[i]) == 2)
                     state = 2;
                 else if(s[i] == '.')
@@ -291,7 +398,7 @@ void analyze(char* s)
                     i++;
                     state = 3;
                     string temp_err;
-                    temp_err = "<WARNING>Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
+                    temp_err = "<WARNING> Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
                     err_info += temp_err;
                     //ERR:出现多个连续小数点
                 }
@@ -325,7 +432,7 @@ void analyze(char* s)
                     number_num ++;
 
                     string temp_err;
-                    temp_err = "<WARNING>Line" +  to_string(line) + ": Digit missing after float point, has taken as default \"" + str + "\"\n";
+                    temp_err = "<WARNING> Line" +  to_string(line) + ": Digit missing after float point, has taken as default \"" + str + "\"\n";
                     err_info += temp_err;
                 }
                 break;
@@ -349,7 +456,7 @@ void analyze(char* s)
                     state = 4;
 
                     string temp_err;
-                    temp_err = "<WARNING>Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
+                    temp_err = "<WARNING> Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
                     err_info += temp_err;
                     //ERR
                 }
@@ -423,7 +530,7 @@ void analyze(char* s)
                     }
                     //cout<<" ";
                     string temp_err;
-                    temp_err = "<WARNING>Line" +  to_string(line) + ": Digit missing after 'e', has taken as default \"" + str + "\"\n";
+                    temp_err = "<WARNING> Line" +  to_string(line) + ": Digit missing after 'e', has taken as default \"" + str + "\"\n";
                     err_info += temp_err;
 
                     print_num(str);
@@ -468,7 +575,7 @@ void analyze(char* s)
                     i++;
 
                     string temp_err;
-                    temp_err = "<WARNING>Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
+                    temp_err = "<WARNING> Line" +  to_string(line) + ": Multiple float points found, has recovered by dropping redundant ones.\n";
                     err_info += temp_err;
                     //ERR
                 }
@@ -503,7 +610,7 @@ void analyze(char* s)
                         else
                         {
                             string temp_err;
-                            temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
+                            temp_err = "<ERROR> Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
                             err_info += temp_err;
                             //cout<<"unsupported operator \""<<str<<"\""<<endl;
                         }
@@ -523,7 +630,7 @@ void analyze(char* s)
                         over = true;
                         crossing_flag = false;
                         string temp_err;
-                        temp_err = "<WARNING>Line" +  to_string(line) + ": Quotation mark missing, has taken all content after the first quotation mark as a string.\n";
+                        temp_err = "<WARNING> Line" +  to_string(line) + ": Quotation mark missing, has taken all content after the first quotation mark as a string.\n";
                         err_info += temp_err; 
                     }   
 
@@ -559,7 +666,7 @@ void analyze(char* s)
                             crossing_flag = false;
 
                             string temp_err;
-                            temp_err = "<WARNING>Line" +  to_string(line) + ": Quotation mark missing, has taken all content after the first quotation mark as a string.\n";
+                            temp_err = "<WARNING> Line" +  to_string(line) + ": Quotation mark missing, has taken all content after the first quotation mark as a string.\n";
                             err_info += temp_err;
 
                             token_queue.push(s[i]);/*
@@ -638,7 +745,7 @@ void analyze(char* s)
                             else
                             {
                                 string temp_err;
-                                temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
+                                temp_err = "<ERROR> Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
                                 err_info += temp_err;
                                 //cout<<"unsupported operator \""<<str<<"\""<<endl;
                             }
@@ -663,7 +770,7 @@ void analyze(char* s)
                             else
                             {
                                 string temp_err;
-                                temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
+                                temp_err = "<ERROR> Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
                                 err_info += temp_err;
                                 //cout<<"unsupported operator \""<<str<<"\""<<endl;
                             }
@@ -737,7 +844,7 @@ void analyze(char* s)
                         else
                         {
                             string temp_err;
-                            temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
+                            temp_err = "<ERROR> Line" +  to_string(line) + ": Unsupported operator \""+ str +"\"\n";
                             err_info += temp_err;
                             //cout<<"unsupported operator \""<<str<<"\""<<endl;
                         }
@@ -794,7 +901,7 @@ void analyze(char* s)
                 if(complete_info)cout<<"==>state -6: ";
                 token_queue.push(s[i]);
                 i++;
-                if(judge_type(s[i]) == 1)
+                if(judge_type(s[i]) == 1 || judge_type(s[i]) == 2)
                     state = -6;
                 else
                 {
@@ -807,7 +914,7 @@ void analyze(char* s)
                         token_queue.pop();
                     }
                     string temp_err;
-                    temp_err = "<ERROR>Line" +  to_string(line) + ": Unsupported identifier \"" + temp_str + "\"\n";
+                    temp_err = "<ERROR> Line" +  to_string(line) + ": Unsupported identifier \"" + temp_str + "\"\n";
                     err_info += temp_err;
                     //cout<<"(ERR0) ";
                 }
@@ -835,9 +942,11 @@ int main(int argc, char *argv[])
     read_tokens();
     read_token_map();
     string code_path;
+    bool need_analyze = false;
 
     if(argc > 1)
     {
+        //system("chcp 65001");
         for(int i = 1; i < argc ; i++)
         {
             string s = argv[i];
@@ -845,6 +954,7 @@ int main(int argc, char *argv[])
             {
                 i++;
                 code_path = argv[i];
+                need_analyze = true;
             }
             else if(s.compare("-o") == 0)
             {
@@ -912,8 +1022,12 @@ int main(int argc, char *argv[])
         //cout<<"hey";
     }
     t.close();
-    //print_err_info();
-    //print_statistics();
+
+    if(need_analyze)
+    {
+        print_err_info();
+        print_statistics();
+    }
     //print_token_table();
     //tokens["&"] = 3;
     //read_op_table("./operator_map.txt");
